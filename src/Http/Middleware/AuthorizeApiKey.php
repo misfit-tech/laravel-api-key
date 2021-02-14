@@ -24,7 +24,7 @@ class AuthorizeApiKey
         $apiKey = ApiKey::getByKey($header);
 
         if ($apiKey instanceof ApiKey) {
-            $this->logAccessEvent($request, $apiKey);
+//            $this->logAccessEvent($request, $apiKey);
             return $next($request);
         }
 
